@@ -1,0 +1,12 @@
+C:\Users\userkent\source\repos\Mini Task Scheduler\Mini Task Scheduler\bin\Debug\Mini Task Scheduler.exe.config
+C:\Users\userkent\source\repos\Mini Task Scheduler\Mini Task Scheduler\bin\Debug\Mini Task Scheduler.exe
+C:\Users\userkent\source\repos\Mini Task Scheduler\Mini Task Scheduler\bin\Debug\Mini Task Scheduler.pdb
+C:\Users\userkent\source\repos\Mini Task Scheduler\Mini Task Scheduler\obj\Debug\Mini Task Scheduler.csprojAssemblyReference.cache
+C:\Users\userkent\source\repos\Mini Task Scheduler\Mini Task Scheduler\obj\Debug\Mini_Task_Scheduler.messagetask.resources
+C:\Users\userkent\source\repos\Mini Task Scheduler\Mini Task Scheduler\obj\Debug\Mini_Task_Scheduler.Properties.Resources.resources
+C:\Users\userkent\source\repos\Mini Task Scheduler\Mini Task Scheduler\obj\Debug\Mini Task Scheduler.csproj.GenerateResource.cache
+C:\Users\userkent\source\repos\Mini Task Scheduler\Mini Task Scheduler\obj\Debug\Mini Task Scheduler.csproj.CoreCompileInputs.cache
+C:\Users\userkent\source\repos\Mini Task Scheduler\Mini Task Scheduler\obj\Debug\Mini Task Scheduler.exe
+C:\Users\userkent\source\repos\Mini Task Scheduler\Mini Task Scheduler\obj\Debug\Mini Task Scheduler.pdb
+C:\Users\userkent\source\repos\Mini Task Scheduler\Mini Task Scheduler\obj\Debug\Mini_Task_Scheduler.MiniTaskSched.resources
+C:\Users\userkent\source\repos\Mini Task Scheduler\Mini Task Scheduler\obj\Debug\Mini_Task_Scheduler.EmailTask.resources
