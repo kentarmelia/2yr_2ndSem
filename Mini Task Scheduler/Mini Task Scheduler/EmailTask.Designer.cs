@@ -61,17 +61,13 @@ namespace Mini_Task_Scheduler
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.p_SEmail = new System.Windows.Forms.Panel();
-            this.label23 = new System.Windows.Forms.Label();
             this.btn_browse = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.tb_message = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.tb_attachment = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tb_MTitle = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -412,17 +408,13 @@ namespace Mini_Task_Scheduler
             // p_SEmail
             // 
             this.p_SEmail.AllowDrop = true;
-            this.p_SEmail.Controls.Add(this.label23);
             this.p_SEmail.Controls.Add(this.btn_browse);
-            this.p_SEmail.Controls.Add(this.label1);
             this.p_SEmail.Controls.Add(this.tb_message);
-            this.p_SEmail.Controls.Add(this.textBox4);
             this.p_SEmail.Controls.Add(this.tb_attachment);
             this.p_SEmail.Controls.Add(this.textBox2);
             this.p_SEmail.Controls.Add(this.textBox1);
             this.p_SEmail.Controls.Add(this.tb_MTitle);
             this.p_SEmail.Controls.Add(this.label22);
-            this.p_SEmail.Controls.Add(this.label17);
             this.p_SEmail.Controls.Add(this.label4);
             this.p_SEmail.Controls.Add(this.label3);
             this.p_SEmail.Controls.Add(this.label2);
@@ -434,16 +426,6 @@ namespace Mini_Task_Scheduler
             this.p_SEmail.TabIndex = 21;
             this.p_SEmail.Paint += new System.Windows.Forms.PaintEventHandler(this.p_dm_Paint);
             // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(128, 329);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(105, 13);
-            this.label23.TabIndex = 8;
-            this.label23.Text = "Ex. smtp.google.com";
-            this.label23.Click += new System.EventHandler(this.label23_Click);
-            // 
             // btn_browse
             // 
             this.btn_browse.Location = new System.Drawing.Point(427, 270);
@@ -454,16 +436,6 @@ namespace Mini_Task_Scheduler
             this.btn_browse.UseVisualStyleBackColor = true;
             this.btn_browse.Click += new System.EventHandler(this.btn_browse_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(115, 290);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(415, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "____________________________________________________________________";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // tb_message
             // 
             this.tb_message.Location = new System.Drawing.Point(129, 152);
@@ -471,16 +443,6 @@ namespace Mini_Task_Scheduler
             this.tb_message.Name = "tb_message";
             this.tb_message.Size = new System.Drawing.Size(373, 112);
             this.tb_message.TabIndex = 5;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(126, 306);
-            this.textBox4.MaxLength = 16;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(374, 20);
-            this.textBox4.TabIndex = 4;
-            this.textBox4.Text = "smtp.";
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // tb_attachment
             // 
@@ -525,16 +487,6 @@ namespace Mini_Task_Scheduler
             this.label22.Size = new System.Drawing.Size(53, 13);
             this.label22.TabIndex = 3;
             this.label22.Text = "Message:";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(51, 309);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(74, 13);
-            this.label17.TabIndex = 2;
-            this.label17.Text = "SMTP Server:";
-            this.label17.Click += new System.EventHandler(this.label21_Click);
             // 
             // label4
             // 
@@ -600,6 +552,7 @@ namespace Mini_Task_Scheduler
             this.Controls.Add(this.p_daily);
             this.Controls.Add(this.p_trigger);
             this.Name = "EmailTask";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Email Scheduler";
             this.Load += new System.EventHandler(this.EmailTask_Load);
             this.p_trigger.ResumeLayout(false);
@@ -649,17 +602,13 @@ namespace Mini_Task_Scheduler
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Panel p_SEmail;
-        private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Button btn_browse;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tb_message;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox tb_attachment;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox tb_MTitle;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

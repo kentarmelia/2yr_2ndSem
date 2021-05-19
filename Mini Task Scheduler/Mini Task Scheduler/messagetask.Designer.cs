@@ -71,6 +71,7 @@ namespace Mini_Task_Scheduler
             this.rb_daily = new System.Windows.Forms.RadioButton();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.btn_finish = new System.Windows.Forms.Button();
             this.p_create.SuspendLayout();
             this.p_dm.SuspendLayout();
             this.p_ot.SuspendLayout();
@@ -522,9 +523,21 @@ namespace Mini_Task_Scheduler
             this.label8.TabIndex = 0;
             this.label8.Text = "Trigger";
             // 
+            // btn_finish
+            // 
+            this.btn_finish.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btn_finish.Location = new System.Drawing.Point(409, 375);
+            this.btn_finish.Name = "btn_finish";
+            this.btn_finish.Size = new System.Drawing.Size(82, 37);
+            this.btn_finish.TabIndex = 16;
+            this.btn_finish.Text = "Finish";
+            this.btn_finish.UseVisualStyleBackColor = true;
+            this.btn_finish.Click += new System.EventHandler(this.btn_finish_Click);
+            // 
             // messagetask
             // 
             this.ClientSize = new System.Drawing.Size(634, 441);
+            this.Controls.Add(this.btn_finish);
             this.Controls.Add(this.p_dm);
             this.Controls.Add(this.p_ot);
             this.Controls.Add(this.p_weekly);
@@ -610,5 +623,6 @@ namespace Mini_Task_Scheduler
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.CheckedListBox clbDays;
+        private System.Windows.Forms.Button btn_finish;
     }
 }
