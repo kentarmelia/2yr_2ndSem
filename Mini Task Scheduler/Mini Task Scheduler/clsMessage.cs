@@ -28,5 +28,6 @@ namespace Mini_Task_Scheduler
         public int fri { get; set; }
         public int sat { get; set; }
         public int sun { get; set; }
+        public int remaindingRW { get; set; }
     }
 }

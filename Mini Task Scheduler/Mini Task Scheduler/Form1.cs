@@ -233,15 +233,16 @@ namespace Mini_Task_Scheduler
                getmessage[i] = dataGridView.Rows[i].Cells[10].Value.ToString().Trim();
             }
 
-
-                for(int i = 0;i <dataGridView.Rows.Count; i++)
+            
+            for (int i = 0;i <dataGridView.Rows.Count; i++)
             {
-                if(getaction[i] == "Message")
+                Application.DoEvents();
+                if (getaction[i] == "Message")
                 {
                     if (gettrigger[i] == "One Time")
                     {
-                       // MessageBox.Show(getdate[i] + " == " + DateTime.Now.ToShortDateString());
-                        if (gettime[i] == DateTime.Now.ToString("HH:mm:ss")&& getdate[i] == DateTime.Now.ToShortDateString()) 
+                    //   MessageBox.Show(getdate[i] + " == " + DateTime.Now.ToString("MM/dd/yyyy"));
+                        if (gettime[i] == DateTime.Now.ToString("HH:mm:ss")&& getdate[i] == DateTime.Now.ToString("MM/dd/yyyy")) 
                         {
                             MessageBox.Show(getmessage[i], getmesstitle[i], MessageBoxButtons.OK);
                         }
@@ -250,7 +251,7 @@ namespace Mini_Task_Scheduler
                     else if(gettrigger[i] == "Daily")
                     {
                      //  MessageBox.Show(getdate[i] + " == " + DateTime.Now.ToShortDateString());
-                        if (gettime[i] == DateTime.Now.ToString("HH:mm:ss") && getdate[i] == DateTime.Now.ToShortDateString())
+                        if (gettime[i] == DateTime.Now.ToString("HH:mm:ss") && getdate[i] == DateTime.Now.ToString("MM/dd/yyyy"))
                         {
                             MessageBox.Show(getmessage[i], getmesstitle[i], MessageBoxButtons.OK);
                             DateTime d = DateTime.Now;
@@ -269,7 +270,9 @@ namespace Mini_Task_Scheduler
                     else
                     {
                         DateTime d = DateTime.Now;
-                    //    int weeknow = int.Parse(getrecurW[i]);
+                      int NumWeek = int.Parse(getrecurW[i]);
+                      int WeekNow = NumWeek*7;
+                     //   Boolean recurnow = true;
                         string monday = "Monday", tuesday="Tuesday", wednesday="Wednesday", thursday="Thursday", friday="Friday", saturday="Saturday", sunday="Sunday";
                         string mon="",tue="",wed="",thu="",fri="",sat="",sun="";
  
@@ -301,48 +304,90 @@ namespace Mini_Task_Scheduler
                         {
                             sun = sunday;
                         }
-                        for(int numWeek = 1;numWeek == 1;)
+                        //MessageBox.Show((thu + " == Thursday  ||" + d.DayOfWeek.ToString() + " == Thursday  ||") + getdate[i] +" == "+ DateTime.Now.ToString("MM/dd/yyyy"));
+
+                            Application.DoEvents();
+                            if ((mon == "Monday" && d.DayOfWeek.ToString() == "Monday") && getdate[i] == DateTime.Now.ToString("MM/dd/yyyy")&& gettime[i] == DateTime.Now.ToString("HH:mm:ss"))
+                            {
+                                MessageBox.Show(getmessage[i], getmesstitle[i], MessageBoxButtons.OK);
+                                
+                            }
+                            if ((tue == "Tuesday" && d.DayOfWeek.ToString() == "Tuesday") && getdate[i] == DateTime.Now.ToString("MM/dd/yyyy") && gettime[i] == DateTime.Now.ToString("HH:mm:ss"))
+                            {
+                                MessageBox.Show(getmessage[i], getmesstitle[i], MessageBoxButtons.OK);
+                                
+                            }
+                            if ((wed == "Wednesday" && d.DayOfWeek.ToString() == "Wednesday") && getdate[i] == DateTime.Now.ToString("MM/dd/yyyy") && gettime[i] == DateTime.Now.ToString("HH:mm:ss"))
+                            {
+                                MessageBox.Show(getmessage[i], getmesstitle[i], MessageBoxButtons.OK);
+                                
+                            }
+                            if ((thu == "Thursday" && d.DayOfWeek.ToString() == "Thursday") && getdate[i] == DateTime.Now.ToString("MM/dd/yyyy") && gettime[i] == DateTime.Now.ToString("HH:mm:ss"))
+                            {
+                                MessageBox.Show(getmessage[i], getmesstitle[i], MessageBoxButtons.OK);
+                                
+                            }
+                            if ((fri == "Friday" && d.DayOfWeek.ToString() == "Friday") && getdate[i] == DateTime.Now.ToString("MM/dd/yyyy") && gettime[i] == DateTime.Now.ToString("HH:mm:ss"))
+                            {
+                                MessageBox.Show(getmessage[i], getmesstitle[i], MessageBoxButtons.OK);
+                                
+                            }
+                            if ((sat == "Saturday" && d.DayOfWeek.ToString() == "Saturday") && getdate[i] == DateTime.Now.ToString("MM/dd/yyyy") && gettime[i] == DateTime.Now.ToString("HH:mm:ss"))
+                            {
+                                MessageBox.Show(getmessage[i], getmesstitle[i], MessageBoxButtons.OK);
+                                
+                            }
+                            if ((sun == "Sunday" && d.DayOfWeek.ToString() == "Sunday") && getdate[i] == DateTime.Now.ToString("MM/dd/yyyy") && gettime[i] == DateTime.Now.ToString("HH:mm:ss"))
+                            {
+                                MessageBox.Show(getmessage[i], getmesstitle[i], MessageBoxButtons.OK);
+                            }
+                        if (DateTime.Now.ToString("HH/mm/ss") == "23/59/59")
                         {
-                            if ((mon == "Monday" && d.DayOfWeek.ToString() == "Monday") && getdate[i] == DateTime.Now.ToShortDateString())
+                            if (sun == "Sunday")
                             {
-                                MessageBox.Show(getmessage[i], getmesstitle[i], MessageBoxButtons.OK);
+                                if (getrecurW[i] != "1")
+                                {
+                                    DateTime dt1 = DateTime.Now;
+                                    string newday;
+                                    newday = dt1.AddDays(WeekNow).ToString();
+                                    cn.Open();
+                                    cmd.Connection = cn;
+                                    cmd = new SqlCommand("update message set ntrigger ='" + gettrigger[i] + "',action= '" + getaction[i] + "',setDate= '" + newday.ToString() + "',setAlarm='" + gettime[i] + "',recurD = '" + getrecurD[i] + "',recurW= '" + getrecurW[i] + "',mon= '" + getmon[i] + "',tue= '" + gettue[i] + "',wed= '" + getwed[i] + "',thu= '" + getthu[i] + "',fri= '" + getfri[i] + "',sat= '" + getsat[i] + "',sun= '" + getsun[i] + "' where title ='" + gettitle[i] + "'", cn);
+                                    cmd.ExecuteNonQuery();
+                                    cn.Close();
+                                }
+                                else
+                                {
+                                    DateTime dt2 = DateTime.Now;
+                                    string newday;
+                                    newday = dt2.AddDays(1).ToString();
+                                    cn.Open();
+                                    cmd.Connection = cn;
+                                    cmd = new SqlCommand("update message set ntrigger ='" + gettrigger[i] + "',action= '" + getaction[i] + "',setDate= '" + newday.ToString() + "',setAlarm='" + gettime[i] + "',recurD = '" + getrecurD[i] + "',recurW= '" + getrecurW[i] + "',mon= '" + getmon[i] + "',tue= '" + gettue[i] + "',wed= '" + getwed[i] + "',thu= '" + getthu[i] + "',fri= '" + getfri[i] + "',sat= '" + getsat[i] + "',sun= '" + getsun[i] + "' where title ='" + gettitle[i] + "'", cn);
+                                    cmd.ExecuteNonQuery();
+                                    cn.Close();
+                                }
                             }
-                            if ((tue == "Tuesday" && d.DayOfWeek.ToString() == "Tuesday") && getdate[i] == DateTime.Now.ToShortDateString())
+                            else
                             {
-                                MessageBox.Show(getmessage[i], getmesstitle[i], MessageBoxButtons.OK);
-                            }
-                            if ((wed == "Wednesday" && d.DayOfWeek.ToString() == "Wednesday") && getdate[i] == DateTime.Now.ToShortDateString())
-                            {
-                                MessageBox.Show(getmessage[i], getmesstitle[i], MessageBoxButtons.OK);
-                            }
-                            if ((thu == "Thursday" && d.DayOfWeek.ToString() == "Thursday") && getdate[i] == DateTime.Now.ToShortDateString())
-                            {
-                                MessageBox.Show(getmessage[i], getmesstitle[i], MessageBoxButtons.OK);
-                            }
-                            if ((fri == "Friday" && d.DayOfWeek.ToString() == "Friday") && getdate[i] == DateTime.Now.ToShortDateString())
-                            {
-                                MessageBox.Show(getmessage[i], getmesstitle[i], MessageBoxButtons.OK);
-                            }
-                            if ((sat == "Saturday" && d.DayOfWeek.ToString() == "Saturday") && getdate[i] == DateTime.Now.ToShortDateString())
-                            {
-                                MessageBox.Show(getmessage[i], getmesstitle[i], MessageBoxButtons.OK);
-                            }
-                            if ((sun == "Sunday" && d.DayOfWeek.ToString() == "Sunday") && getdate[i] == DateTime.Now.ToShortDateString())
-                            {
-                                MessageBox.Show(getmessage[i], getmesstitle[i], MessageBoxButtons.OK);
-                            }
-                            if(d.DayOfWeek.ToString() == "Sunday"&&DateTime.Now.ToShortTimeString() == "11:59:59")
-                            {
-                               
-                            }
-                        }
+                                DateTime dt = DateTime.Now;
+                                string newday;
+                                newday = dt.AddDays(1).ToString();
+                                cn.Open();
+                                cmd.Connection = cn;
+                                cmd = new SqlCommand("update message set ntrigger ='" + gettrigger[i] + "',action= '" + getaction[i] + "',setDate= '" + newday.ToString() + "',setAlarm='" + gettime[i] + "',recurD = '" + getrecurD[i] + "',recurW= '" + getrecurW[i] + "',mon= '" + getmon[i] + "',tue= '" + gettue[i] + "',wed= '" + getwed[i] + "',thu= '" + getthu[i] + "',fri= '" + getfri[i] + "',sat= '" + getsat[i] + "',sun= '" + getsun[i] + "' where title ='" + gettitle[i] + "'", cn);
+                                cmd.ExecuteNonQuery();
+                                cn.Close();
+                            }                        
+                        }    
+                      
                     }
                     
                 }
-
+                
 
             }
-
+            
 
 
 

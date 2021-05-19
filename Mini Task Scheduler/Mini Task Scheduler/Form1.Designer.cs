@@ -40,13 +40,6 @@ namespace Mini_Task_Scheduler
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.lbl_Time = new System.Windows.Forms.Label();
-            this.clsMessageBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.clsMessageBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Action = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.trigger = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,6 +58,13 @@ namespace Mini_Task_Scheduler
             this.fri = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sun = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clsMessageBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button4 = new System.Windows.Forms.Button();
+            this.label = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_Time = new System.Windows.Forms.Label();
+            this.clsMessageBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clsMessageBindingSource)).BeginInit();
@@ -180,62 +180,6 @@ namespace Mini_Task_Scheduler
             this.dataGridView.TabIndex = 6;
             this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
             this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(74, 385);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(74, 32);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "View";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // label
-            // 
-            this.label.AutoSize = true;
-            this.label.ForeColor = System.Drawing.Color.Black;
-            this.label.Location = new System.Drawing.Point(144, 184);
-            this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(33, 13);
-            this.label.TabIndex = 7;
-            this.label.Text = "None";
-            this.label.Click += new System.EventHandler(this.label_Click);
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(37, 184);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 13);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Current row clicked:";
-            // 
-            // lbl_Time
-            // 
-            this.lbl_Time.AutoSize = true;
-            this.lbl_Time.Font = new System.Drawing.Font("Impact", 27F);
-            this.lbl_Time.Location = new System.Drawing.Point(12, 299);
-            this.lbl_Time.Name = "lbl_Time";
-            this.lbl_Time.Size = new System.Drawing.Size(195, 44);
-            this.lbl_Time.TabIndex = 9;
-            this.lbl_Time.Text = "00:00:00:NN";
-            this.lbl_Time.Click += new System.EventHandler(this.lbl_Time_Click);
-            // 
-            // clsMessageBindingSource
-            // 
-            this.clsMessageBindingSource.DataSource = typeof(Mini_Task_Scheduler.clsMessage);
-            // 
-            // clsMessageBindingSource1
-            // 
-            this.clsMessageBindingSource1.DataSource = typeof(Mini_Task_Scheduler.clsMessage);
             // 
             // titleDataGridViewTextBoxColumn
             // 
@@ -368,6 +312,62 @@ namespace Mini_Task_Scheduler
             this.sun.HeaderText = "sun";
             this.sun.Name = "sun";
             this.sun.ReadOnly = true;
+            // 
+            // clsMessageBindingSource
+            // 
+            this.clsMessageBindingSource.DataSource = typeof(Mini_Task_Scheduler.clsMessage);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(74, 385);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(74, 32);
+            this.button4.TabIndex = 5;
+            this.button4.Text = "View";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // label
+            // 
+            this.label.AutoSize = true;
+            this.label.ForeColor = System.Drawing.Color.Black;
+            this.label.Location = new System.Drawing.Point(144, 184);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(33, 13);
+            this.label.TabIndex = 7;
+            this.label.Text = "None";
+            this.label.Click += new System.EventHandler(this.label_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(37, 184);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(101, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Current row clicked:";
+            // 
+            // lbl_Time
+            // 
+            this.lbl_Time.AutoSize = true;
+            this.lbl_Time.Font = new System.Drawing.Font("Impact", 27F);
+            this.lbl_Time.Location = new System.Drawing.Point(12, 299);
+            this.lbl_Time.Name = "lbl_Time";
+            this.lbl_Time.Size = new System.Drawing.Size(195, 44);
+            this.lbl_Time.TabIndex = 9;
+            this.lbl_Time.Text = "00:00:00:NN";
+            this.lbl_Time.Click += new System.EventHandler(this.lbl_Time_Click);
+            // 
+            // clsMessageBindingSource1
+            // 
+            this.clsMessageBindingSource1.DataSource = typeof(Mini_Task_Scheduler.clsMessage);
             // 
             // MiniTaskSched
             // 

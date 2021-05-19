@@ -166,7 +166,7 @@ namespace Mini_Task_Scheduler
 
         private void btn_cancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Dispose();
         }
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
