@@ -12,22 +12,26 @@ namespace Mini_Task_Scheduler
        public string trigger { get; set; }
        public string Action { get; set; }
        public string setDate { get; set; }
-       public DateTime setAlarm { get; set; }
-       public int recurD { get; set; }
-       public int recurW { get; set; }   
+       public string setAlarm { get; set; }
+       public string recurD { get; set; }
+       public string recurW { get; set; }   
        private int[] day = new int[6];
         public string triggerview { get; set; }
         public string messTitle { get; set; }
        public string message { get; set; }
         public string created { get; set; }
         public int[] Day { get => day; set => day = value; }
-        public int mon { get; set; }
-        public int tue { get; set; }
-        public int wed { get; set; }
-        public int thu { get; set; }
-        public int fri { get; set; }
-        public int sat { get; set; }
-        public int sun { get; set; }
-        public int remaindingRW { get; set; }
+        public string mon { get; set; }
+        public string tue { get; set; }
+        public string wed { get; set; }
+        public string thu { get; set; }
+        public string fri { get; set; }
+        public string sat { get; set; }
+        public string sun { get; set; }
+        public string emFrom { get; set; }
+        public string emTo { get; set; }
+        public string emServer { get; set; }
+        public string emPass { get; set; }
+        public string emAttach { get; set; }
     }
 }

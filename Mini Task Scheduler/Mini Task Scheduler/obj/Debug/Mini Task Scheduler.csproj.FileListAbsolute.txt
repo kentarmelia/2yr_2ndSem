@@ -10,3 +10,6 @@ C:\Users\userkent\source\repos\Mini Task Scheduler\Mini Task Scheduler\obj\Debug
 C:\Users\userkent\source\repos\Mini Task Scheduler\Mini Task Scheduler\obj\Debug\Mini Task Scheduler.pdb
 C:\Users\userkent\source\repos\Mini Task Scheduler\Mini Task Scheduler\obj\Debug\Mini_Task_Scheduler.MiniTaskSched.resources
 C:\Users\userkent\source\repos\Mini Task Scheduler\Mini Task Scheduler\obj\Debug\Mini_Task_Scheduler.EmailTask.resources
+C:\Users\userkent\source\repos\Mini Task Scheduler\Mini Task Scheduler\obj\Debug\Mini_Task_Scheduler.frmMessView.resources
+C:\Users\userkent\source\repos\Mini Task Scheduler\Mini Task Scheduler\obj\Debug\Mini_Task_Scheduler.emailUpdate.resources
+C:\Users\userkent\source\repos\Mini Task Scheduler\Mini Task Scheduler\obj\Debug\Mini_Task_Scheduler.AboutUs.resources

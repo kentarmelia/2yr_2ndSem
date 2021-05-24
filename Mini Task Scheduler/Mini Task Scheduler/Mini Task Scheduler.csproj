@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutUs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutUs.Designer.cs">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </Compile>
     <Compile Include="clsEmail.cs" />
     <Compile Include="clsMessage.cs" />
     <Compile Include="EmailTask.cs">
@@ -54,11 +61,26 @@
     <Compile Include="EmailTask.Designer.cs">
       <DependentUpon>EmailTask.cs</DependentUpon>
     </Compile>
+    <Compile Include="emailUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="emailUpdate.Designer.cs">
+      <DependentUpon>emailUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GradientPanel.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="messagetask.cs">
       <SubType>Form</SubType>
@@ -68,11 +90,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutUs.resx">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EmailTask.resx">
       <DependentUpon>EmailTask.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="emailUpdate.resx">
+      <DependentUpon>emailUpdate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="messagetask.resx">
       <DependentUpon>messagetask.cs</DependentUpon>
@@ -85,6 +116,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\DataSources\clsEmail.datasource" />
     <None Include="Properties\DataSources\clsMessage.datasource" />
@@ -100,6 +132,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logow1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgblue.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoT1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Name.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Custom-Icon-Design-Flatastic-1-Back.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

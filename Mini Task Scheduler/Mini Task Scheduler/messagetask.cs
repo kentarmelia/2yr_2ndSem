@@ -440,6 +440,13 @@ namespace Mini_Task_Scheduler
             cmd.Parameters.AddWithValue("@message", tb_message.Text);
           //  MessageInfo.created = DateTime.Now.ToString();
             cmd.Parameters.AddWithValue("@created", DateTime.Now.ToString());
+           
+            cmd.Parameters.AddWithValue("@emfrom", "x");
+            cmd.Parameters.AddWithValue("@emto", "x");
+            cmd.Parameters.AddWithValue("@emserver", "x");
+            cmd.Parameters.AddWithValue("@empass", "x");
+            cmd.Parameters.AddWithValue("@emattach", "x");
+
             cmd.ExecuteNonQuery();
             cn.Close();
              //showData();
